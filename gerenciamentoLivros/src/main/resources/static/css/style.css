@@ -99,10 +99,10 @@ i {
 }
 
 
-.bemvindo {
+.titulo {
 	text-align: center;
 }
 
-.bemvindo > h1 {
+.titulo > h1 {
 	font-size: 2.2rem;
 }
