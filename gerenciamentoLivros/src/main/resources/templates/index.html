@@ -2,11 +2,13 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8">
-
 <title> Página inicial </title>
+<link rel="stylesheet" th:href="@{css/style.css}">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}"
+
+
 </head>
 <body>
-	<h1> Bem vindos!!!</h1>
 	
 	
 	<header>
@@ -17,16 +19,17 @@
       <nav>
         <ul>
             <li id="logo"> <i class="fas fa-anchor logo"></i> <a href="index.html"> LOGO </a>  </li>
-            <li><a th:href="@{/lidos}"> Livros lidos  </a> </li>
-			<li> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
-			<li> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
-			<li> <a th:href="@{/emprestados}"> Livros emprestados </a> </li>
+            <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
+			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
+			<li><i class="far fa-bookmark"></i> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
+			<li> <i class="fas fa-book-open"></i> <a th:href="@{/emprestados}"> Livros emprestados </a> </li>
 
             <li> <i class="fas fa-sign-out-alt"></i> <a href="login.html">  Sair </a> </li>
         </ul>
         </nav>
   </header>
 	
+	<h1> Bem vindos!!!</h1>
 	
 	<ul>
 		
