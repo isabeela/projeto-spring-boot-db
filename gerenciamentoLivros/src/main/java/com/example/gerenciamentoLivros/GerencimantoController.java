@@ -6,10 +6,32 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class GerencimantoController {
+	
 	@GetMapping("/")
-	public String ola() {
-		return "index"; 
+	public String inicio () {
+		return "index";
+	}
+	
+	@GetMapping("/lidos")
+	public String lidos () {
+		return "lidos";
+	}
+	
+	@GetMapping("/proximas")
+	public String proximas () {
+		return "proximas";
+	}
+	
+	@GetMapping("/lista-desejos")
+	public String listadeDesejos () {
+		return "lista-desejos";
+	}
+		
+	@GetMapping("/emprestados")
+	public String emprestados () {
+		return "emprestados";
 	}
 
+	
 
 }

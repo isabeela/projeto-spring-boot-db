@@ -1,1 +1,39 @@
-<h1> Oiee </h1>
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+
+<title> Página inicial </title>
+</head>
+<body>
+	<h1> Bem vindos!!!</h1>
+	
+	
+	<header>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars fa-2x menu"></i>
+    </label>
+      <nav>
+        <ul>
+            <li id="logo"> <i class="fas fa-anchor logo"></i> <a href="index.html"> LOGO </a>  </li>
+            <li><a th:href="@{/lidos}"> Livros lidos  </a> </li>
+			<li> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
+			<li> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
+			<li> <a th:href="@{/emprestados}"> Livros emprestados </a> </li>
+
+            <li> <i class="fas fa-sign-out-alt"></i> <a href="login.html">  Sair </a> </li>
+        </ul>
+        </nav>
+  </header>
+	
+	
+	<ul>
+		
+		
+	
+	</ul>
+
+
+</body>
+</html>
