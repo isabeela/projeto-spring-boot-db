@@ -18,7 +18,9 @@
     </label>
       <nav>
         <ul>
-            <li id="logo"> <i class="fas fa-anchor logo"></i> <a href="index.html"> LOGO </a>  </li>
+            <li id="logo"> <i class="fas fa-anchor logo"></i> <a th:href="@{/}"> LOGO </a>  </li>
+            
+            <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
             <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
 			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
 			<li><i class="far fa-bookmark"></i> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
