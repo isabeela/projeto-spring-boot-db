@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title> Livros emprestados </title>
 <link rel="stylesheet" th:href="@{css/style.css}">
-<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}"
-
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
+<link rel="icon" th:href="@{img/icone-astronauta.png}">
 
 </head>
 <body>
@@ -18,8 +18,8 @@
     </label>
       <nav>
         <ul>
-            <li id="logo"> <i class="fas fa-anchor logo"></i> <a th:href="@{/}"> LOGO </a>  </li>
-            
+          
+           <li id="logo"> <a th:href="@{/}"> <img th:src=@{img/logo-livronauta.png} class="logo"> </a>  </li>
              <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
             <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
 			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas}"> Próximas leituras </a> </li>

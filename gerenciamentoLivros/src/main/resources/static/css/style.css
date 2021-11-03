@@ -87,9 +87,8 @@ li {
 }
 
 .logo  {
-    color: #d2d1d1;
-    font-size: 27px;
-    margin-right: 10px;
+   width: 50%;
+   text-align: center;
 }  
 
 i {
