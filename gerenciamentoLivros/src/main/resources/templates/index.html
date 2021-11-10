@@ -32,7 +32,6 @@
   </header>
 	
 	 <section id="banner">
- 
         <div class="banner">
             <div class="imagem-banner">
                 <img th:src=@{img/astrounauta-lendo.png} class="imagem-astronauta">
@@ -42,16 +41,40 @@
                 <p> Este ano você leu {{livros}} livros </p>
             </div>
         </div>
-    
     </section>
+    
+    
+    <section id="escolha">
+        <h1>  Escolha o que deseja fazer </h1>
+        <div class="escolha">
+            <div class="lidos">
+                <a th:href="@{/lidos}"> <img th:src=@{img/icone-lidos.png} class="icone" alt="desenho de um astronauta lendo um livro"> </a>
+                <p> Livros lidos / Leitura atual </p>
+            </div>
+
+            <div class="proximos">
+              <a  th:href="@{/proximas}"> <img th:src=@{img/icone-proximo.png} class="icone" alt="desenho de um astronauta em um foguete"> </a> 
+                <p> Liste suas próximas leituras </p>
+            </div>
+           
+            <div class="lista">
+                <a th:href="@{/lista-desejos}">  <img th:src=@{img/icone-lista.png} class="icone" alt="desenho de um astronauta pegando uma estrela"> </a>
+                <p> Faça sua lista de desejos </p>
+            </div>
+
+            <div class="emprestimo">
+                <a th:href="@{/emprestados}"> <img th:src=@{img/icone-emprestimo.png} class="icone" alt="desenho de dois astronautas conversando"> </a>
+                <p> Marque aqui seus livros emprestados </p>
+            </div>
+
+        </div>
+    </section>
+    
+    <footer>
+        <img th:src=@{img/logo-livronauta-rodape.png} class="logo-rodape">
+    </footer>
+    
 	
-	
-	
-	<ul>
-		
-		
-	
-	</ul>
 
 
 </body>
