@@ -31,11 +31,20 @@
         </nav>
   </header>
 	
-	<section>
-		<div class="titulo">
-		<h1> Bem vindos!!!</h1>
-		</div>
-	</section>
+	 <section id="banner">
+ 
+        <div class="banner">
+            <div class="imagem-banner">
+                <img th:src=@{img/astrounauta-lendo.png} class="imagem-astronauta">
+            </div>
+            <div class="texto">
+                <p> Sua leitura atual é: {{atual}} </p>
+                <p> Este ano você leu {{livros}} livros </p>
+            </div>
+        </div>
+    
+    </section>
+	
 	
 	
 	<ul>

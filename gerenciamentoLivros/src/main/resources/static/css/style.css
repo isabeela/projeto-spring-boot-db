@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Logo;
+    src: url(../fonte/FreeSansBold.otf);
+}
+
 :root {
     --font-family-sans-serif: "Open Sans",
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -8,7 +13,8 @@
 body{
 	padding: 0;
 	margin: 0;
-	 font-family: sans-serif;
+	font-family: sans-serif;
+	background-color: #e3e3e3;
 }
 
 header {
@@ -97,10 +103,406 @@ i {
 }
 
 
-.titulo {
-	text-align: center;
+h1 {
+    font-family: 'Logo';
 }
 
-.titulo > h1 {
-	font-size: 2.2rem;
+a {
+    text-decoration: none;
+}
+
+
+/*** BANNER ***/
+
+#banner {
+    background-color: #0a0233;
+    width: 100%;
+    
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#banner  p {
+    color: #fff;
+}
+
+.imagem-banner {
+    padding: 0 50px;
+     margin: 15px 10px;
+}
+
+.imagem-astronauta{
+    width: 80%;
+    
+}
+
+.texto {
+   font-family: 'Logo';
+   font-size: 2.1rem;
+   margin: 5% 0;
+  
+}
+
+
+/***  OPÇÕES ***/
+
+#escolha {
+    font-size: 1.8rem;
+    text-align: center;
+    background-color: #e3e3e3;
+    padding: 20px;
+}
+
+.escolha {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.lidos, .proximos, .lista, .emprestimo {
+    margin: 2px auto;
+    width: 25%;
+}
+
+.lidos p, .proximos p, .lista p, .emprestimo p {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.icone {
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 7px 7px 7px #2d2d2e;
+}
+
+
+.lidos:hover, .proximos:hover, .lista:hover, .emprestimo:hover {
+    transition-delay: 3s;
+    
+}
+
+.escolha  p {
+    font-size: 0.6em;
+}
+
+
+
+/***** CONFIGURAÇÕES GERAIS DE TODAS AS  PÁGINAS ******/
+
+/* BOTÃO DO FORMULÁRIO **/
+
+.cadastro {
+    color: #0a0233;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+
+.cadastro:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+
+/* TABELA */
+
+#tabela {
+    text-align: center;
+    padding: 50px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 70%;
+    border-spacing: 2px;
+   
+}
+
+th, td {
+    padding: 15px;
+    width: 20%;
+}
+
+
+th {
+    background-color: #ecebeb;
+    color: #000;
+}
+
+td {
+    background-color: #f3f2f2;
+    color: #000;
+    border-top: 2px solid #e6e3e3;
+}
+
+
+/***** POPUP ******/
+
+
+#modal {
+    display: none;
+}
+
+#modal-sucesso {
+    display: none;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    animation: entrada 0.5s;
+}
+
+
+.topo-form {
+    background-color: #0a0233;
+    width: 95%;
+    height: 65px;
+    top: 0;
+    left: 0;
+    color: #fff;
+    position: absolute;
+    padding: 0 20px;
+    font-size: 0.8rem;
+}
+
+
+input[type=checkbox] {
+    cursor: pointer;
+    width: 3%;
+    left: 0;
+    height: 16px;
+    margin:  10px 0 ;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    
+  }
+
+  .leitura-atual {
+      margin: 20px -10px;
+      padding: 0 18px;
+  }
+
+
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modalpopup {
+    background-color: #e3e3e3;
+    background-size: 100%;
+    width: 650px;
+    min-width: 100px;
+    padding: 80px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.fechar {
+    font-family:cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    color: #fff;
+    background-color: #0a0233;
+    border: none;
+    cursor: pointer;
+}
+
+
+.sucesso {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 20px 0;
+}
+
+
+/*** FORMULÁRIO ***/
+
+form {
+    width: 100%;
+}
+
+input, select {
+    padding: 10px;
+    width: 94%;
+    margin: 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+.lado-a-lado {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+select {
+    font-size: 1rem;
+    color: #7a7976;
+    flex: 2;
+    width: auto;
+}
+
+input[type="number"]{
+    flex: 2;
+
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+
+
+form > p {
+    color: #807b7b;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn {
+    text-align: left;
+    margin: 40px -15px;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.salvar {
+    background-color: #0b7a66;
+    padding: 15px;
+    color: #fff;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.cancelar {
+    background-color: #c54545;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.ok {
+    background-color: #0b7a66;
+    padding: 15px 30px;
+    color: #fff;
+    margin:  40px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-ok {
+    margin: 30px 0;
+}
+
+/**** ESTRELAS ****/
+
+.avaliacao, input[type=radio]{
+    display: block;
+}
+
+.avaliacao > p {
+    margin: 0 10px;
+}
+
+.rating {
+    width: 80%;
+    font-size: 30px;
+    padding: 0;
+}
+
+.rating input {
+float: right;
+display: block;
+opacity: 0;
+left: 0;
+width: 10%;
+padding: 0;
+}
+
+.rating input,
+.rating label {
+    padding: -30px;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating input[type=radio]:hover,
+.rating input[type=radio]:hover ~ a,
+.rating input[type=radio]:focus,
+.rating input[type=radio]:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction:rtl;
+}
+.rating2 a {
+    padding: 0;
+}
+
+/*** RODAPÉ ****/
+
+footer {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+.logo-rodape {
+    width: 12%;
+    padding: 15px 0;
 }
