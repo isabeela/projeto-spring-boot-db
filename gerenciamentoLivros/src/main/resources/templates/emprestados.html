@@ -6,6 +6,7 @@
 <link rel="stylesheet" th:href="@{css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
 <link rel="icon" th:href="@{img/icone-astronauta.png}">
+<script th:src="@{js/script.js}"></script>
 
 </head>
 <body>
@@ -20,7 +21,7 @@
         <ul>
           
            <li id="logo"> <a th:href="@{/}"> <img th:src=@{img/logo-livronauta.png} class="logo"> </a>  </li>
-             <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
+            <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
             <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
 			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
 			<li><i class="far fa-bookmark"></i> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
@@ -30,20 +31,167 @@
         </nav>
   </header>
 	
-	<section>
-		<div class="titulo">
-			<h1> Página em construção </h1>
-		</div>
-		
+	 <section id="banner">
+        <div class="banner">
+            <div class="imagem-banner">
+                <img th:src=@{img/icone-cadastrar-emprestimo.png} class="imagem-astronauta">
+            </div>
+            <div class="texto">
+                <p> Cadastre seus  livros  <br> que foram emprestados </p>
+                <div class="botao">
+                    <a href="#" class="cadastro" onclick="form()">  Cadastre aqui  </a> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="tabela">
+        <h1> Livros emprestados </h1>
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th> Livro </th>
+                    <th> Autor </th>
+                    <th> Gênero </th>
+                    <th> Para quem emprestou </th>
+                    <th> Dia do Empréstimo </th>
+                    <th> Editar </th>
+                    <th> Excluir </th>
+                </tr>
+
+                <tr>
+                    <td> {{ nm_livro }}</td>
+                    <td> {{ nm_autor }}</td>
+                    <td> {{ genero }}</td>
+                    <td> {{ nm_emprestimo }}</td>
+                    <td> {{ dia }}</td>
+                     <td> <i class="far fa-edit icone-tabela"></i> </td>
+                    <td> <i class="fas fa-trash icone-tabela"></i> </td>
+
+                </tr>
+
+                <tr>
+                    <td> {{ nm_livro }}</td>
+                    <td> {{ nm_autor }}</td>
+                    <td> {{ genero }}</td>
+                    <td> {{ nm_emprestimo }}</td>
+                    <td> {{ dia }}</td>
+                    <td> Editar </td>
+                    <td> Excluir </td>
+                </tr>
+
+                <tr>
+                    <td> {{ nm_livro }}</td>
+                    <td> {{ nm_autor }}</td>
+                    <td> {{ genero }}</td>
+                    <td> {{ nm_emprestimo }}</td>
+                    <td> {{ dia }}</td>
+                    <td> Editar </td>
+                    <td> Excluir </td>
+
+                </tr>
+
+                <tr>
+                    <td> {{ nm_livro }}</td>
+                    <td> {{ nm_autor }}</td>
+                    <td> {{ genero }}</td>
+                    <td> {{ nm_emprestimo }}</td>
+                    <td> {{ dia }}</td>
+                    <td> Editar </td>
+                    <td> Excluir </td>
+
+                </tr>
+
+                <tr>
+                    <td> {{ nm_livro }}</td>
+                    <td> {{ nm_autor }}</td>
+                    <td> {{ genero }}</td>
+                    <td> {{ nm_emprestimo }}</td>
+                    <td> {{ dia }}</td>
+                    <td> Editar </td>
+                    <td> Excluir </td>
+
+                </tr>
+     
+            </table>
+        </div>
+    </section>
+
+
+	 <!-- Formulário -->
+
+       <div id="modal" class="modal-container">
+        <div class="modalpopup">
+            <div class="topo-form">
+                <h1> Liste seus livros emprestados </h1>
+                <button class="fechar"> X </button>
+            </div>
+            <div class="formulario">
+                <form>
+                    <input type="text" placeholder="Nome do Livro">
+                    <input type="text" placeholder=" Autor ">
+                    <select name="genero">
+                        <option value="genero"> Gênero </option>
+                        <option value="aventura"> Aventura </option>
+                        <option value="autoajuda"> Auto Ajuda </option>
+                        <option value="biografia"> Biografia </option>
+                        <option value="conto"> Conto </option>
+                        <option value="didatico"> Didático/Educacional </option>
+                        <option value="distopia"> Distopia </option>
+                        <option value="drama"> Drama </option>
+                        <option value="ficcao"> Ficção </option>
+                        <option value="fantasia"> Fantasia </option>
+                        <option value="poema"> Poema / Poesia </option>
+                        <option value="policial"> Policial </option>
+                        <option value="romance"> Romance </option>
+                        <option value="suspense"> Suspense </option>
+                        <option value="terror"> Terror </option>
+                    </select>
+
+                    <input type="text" placeholder="Para quem foi emprestado">
+                    
+                   <input type="text" placeholder="Dia do empréstimo">
+
+                    
+                    <div class="btn">
+                        <a href="#" class="salvar" onclick="sucesso()"> Salvar </a>
+                        <a href="#" class="cancelar" onclick="cancelar()"> Cancelar </a>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-sucesso" class="modal-container">
+        <div class="modalpopup">
+            <div class="topo-form">
+                <h1> Sucesso!!! </h1>
+            </div>
+            <div class="sucesso">
+               <img th:src=@{img/icone-sucesso.png} alt="astronauta comemorando">
+                <h1> Dados salvos com sucesso !!</h1>
+                <div class="btn-ok">
+                    <a href="#" class="ok"> OK </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+
+    
+
+
+    <footer>
+       <img th:src=@{img/logo-livronauta.png} class="logo-rodape">
+    </footer>
+    
+    
+    
 	
-	</section>
-	
-	
-	<ul>
-		
-		
-	
-	</ul>
+
 
 
 </body>

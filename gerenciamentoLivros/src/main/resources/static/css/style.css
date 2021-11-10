@@ -256,7 +256,10 @@ td {
     border-top: 2px solid #e6e3e3;
 }
 
-
+.icone-tabela {
+	color: #01021a;
+	font-size: 1.2rem;
+}
 /***** POPUP ******/
 
 
