@@ -3,6 +3,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class GerencimantoController {
@@ -17,10 +18,11 @@ public class GerencimantoController {
 		return "lidos";
 	}
 	
-	@GetMapping("/proximas")
+	@GetMapping("/proximas-leituras")
 	public String proximas () {
-		return "proximas";
+		return "proximas-leituras";
 	}
+	
 	
 	@GetMapping("/lista-desejos")
 	public String listadeDesejos () {
@@ -31,7 +33,5 @@ public class GerencimantoController {
 	public String emprestados () {
 		return "emprestados";
 	}
-
 	
-
 }

@@ -7,9 +7,6 @@ CREATE TABLE IF NOT EXISTS lista (
 );
 
 
-CREATE TYPE genero AS ENUM('Aventura', 'Auto-Ajuda', 'Biografia', 'Conto',
-'Didático/Educaional', 'Distopia', 'Drama', 'Fantasia', 'Ficção', 'Poema/Poesia', 
-'Policial', 'Romance', 'Suspense', 'Terror');
 
 CREATE TABLE IF NOT EXISTS proximas (
      id     serial PRIMARY KEY,

@@ -263,14 +263,6 @@ td {
 /***** POPUP ******/
 
 
-#modal {
-    display: none;
-}
-
-#modal-sucesso {
-    display: none;
-}
-
 .modal-container{
     width: 100vw;
     height: 100vw;

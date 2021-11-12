@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8">
-<title> Próximas Leituras </title>
+<title> Livros emprestados </title>
 <link rel="stylesheet" th:href="@{css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
 <link rel="icon" th:href="@{img/icone-astronauta.png}">
 <script th:src="@{js/script.js}"></script>
-
 </head>
-<body>
-	
-	
-	<header>
+ 
+ 
+ <body>
+ 
+<header>
     <input type="checkbox" id="check">
     <label for="check">
       <i class="fas fa-bars fa-2x menu"></i>
@@ -22,7 +22,7 @@
              <li id="logo"> <a th:href="@{/}"> <img th:src=@{img/logo-livronauta.png} class="logo"> </a>  </li>
              <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
             <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
-			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas}"> Próximas leituras </a> </li>
+			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas-leituras}"> Próximas leituras </a> </li>
 			<li><i class="far fa-bookmark"></i> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
 			<li> <i class="fas fa-book-open"></i> <a th:href="@{/emprestados}"> Emprestados </a> </li>
 
@@ -38,7 +38,7 @@
             <div class="texto">
                 <p> Cadastre suas próximas <br> leituras </p>
                 <div class="botao">
-                    <a href="#" class="cadastro" onclick="form()">  Cadastre aqui  </a> 
+                    <a th:href="@{proximas}" class="cadastro">  Cadastre aqui  </a> 
                 </div>
             </div>
         </div>
@@ -112,8 +112,7 @@
             </table>
         </div>
     </section>
-    
-     <!-- Formulário -->
+ <!-- Formulário -->
 
         <div id="modal" class="modal-container">
             <div class="modalpopup">
@@ -122,9 +121,9 @@
                     <button class="fechar"> X </button>
                 </div>
                 <div class="formulario">
-                    <form>
-                        <input type="text" placeholder="Nome do Livro">
-                        <input type="text" placeholder=" Autor ">
+                    <form action="#" th:action="@{/proximas}" method=post th:object="${proximas}"  >
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
+                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
                         <select name="genero">
                             <option value="genero"> Gênero </option>
                             <option value="aventura"> Aventura </option>
@@ -143,10 +142,9 @@
                             <option value="terror"> Terror </option>
                         </select>
                         
-                       
-                        
+                           
                         <div class="btn">
-                            <a href="#" class="salvar" onclick="sucesso()"> Salvar </a>
+                            <button class="salvar"  type="submit" > Salvar </button>
                             <a href="#" class="cancelar" onclick="cancelar()"> Cancelar </a>
                         </div>
                        
@@ -154,31 +152,12 @@
                 </div>
             </div>
         </div>
-    
-    <div id="modal-sucesso" class="modal-container">
-		<div class="modalpopup">
-            <div class="topo-form">
-                <h1> Sucesso!!! </h1>
-            </div>
-            <div class="sucesso">
-                <img th:src=@{img/icone-sucesso.png} alt="astronauta comemorando">
-                <h1> Dados salvos com sucesso !!</h1>
-                <div class="btn-ok">
-                    <a href="#" class="ok"> OK </a>
-                </div>
-                
-            </div>
-		</div>
-	</div>
-
-
-
-
-    <footer>
+        
+        
+          <footer>
         <img th:src=@{img/logo-livronauta.png} class="logo-rodape">
     </footer>
-    
-
-
-</body>
-</html>
+     </body>
+   </html>
+        
+        
