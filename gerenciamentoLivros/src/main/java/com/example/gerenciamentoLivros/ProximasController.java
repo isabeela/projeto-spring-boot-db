@@ -42,11 +42,11 @@ public class ProximasController {
 	  }
 	
 	
-	@GetMapping("/proximas-leitura")
+	@GetMapping("/prox")
 	public String listar (Model model) {
 		ProximasService pdao = context.getBean(ProximasService.class);
-		List<Map< String,Object>> listar = pdao.getProximas();
-		model.addAttribute("proximos", listar);
+		List<Map< String,Object>> prox = pdao.getProximas();
+		model.addAttribute("listar", prox);
 		return  "proximas-leituras";
 	}
 	
