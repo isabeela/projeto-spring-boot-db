@@ -1,5 +1,7 @@
 package com.example.gerenciamentoLivros.model;
 
+
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
@@ -34,13 +36,22 @@ public class ProximasDAO {
 		jdbc.update(sql, obj);
 	}
 	
-	public Map<String, Object> getProximas(int id){
+	/*public Map<String, Object> getProximas(int id){
 		String sql = "SELECT * FROM proximas WHERE proximas.id = ?";
 		Object obj[] = new Object[1];
 		obj[0] = id;
 		
 		return jdbc.queryForMap(sql, obj);
 		
-	}
-
+	}*/
+	
+	public List<Map< String,Object>> getProximas(){
+		String sql = "SELECT * FROM proximas";
+		List <Map< String,Object>> prox = (List <Map< String,Object>>)
+		 jdbc.queryForList(sql);
+		return prox;
+	}	
+		
 }
+	
+	
