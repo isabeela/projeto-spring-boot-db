@@ -18,12 +18,6 @@ public class GerencimantoController {
 		return "lidos";
 	}
 	
-   /*@GetMapping("/prox")
-	public String proximas () {
-		return "proximas-leituras";
-	} */
-	
-	
 	@GetMapping("/lista-desejos")
 	public String listadeDesejos () {
 		return "lista-desejos";

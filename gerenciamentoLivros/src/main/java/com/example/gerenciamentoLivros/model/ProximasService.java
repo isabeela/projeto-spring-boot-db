@@ -22,5 +22,9 @@ public class ProximasService {
 		return pdao.getProximas();
 	}
 	
+	public void deleteProximas(int id) {
+		pdao.deleteProximas(id);
+	}
+	
 
 }

@@ -51,6 +51,14 @@ public class ProximasDAO {
 		 jdbc.queryForList(sql);
 		return prox;
 	}	
+	
+	
+	public void deleteProximas (int id) {
+		String sql = "DELETE FROM proximas WHERE id = ?";
+		Object[] obj = new Object[1];
+		obj[0] = id;
+		jdbc.update(sql, obj);
+	}
 		
 }
 	

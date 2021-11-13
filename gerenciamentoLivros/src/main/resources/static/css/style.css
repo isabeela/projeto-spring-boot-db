@@ -256,10 +256,18 @@ td {
     border-top: 2px solid #e6e3e3;
 }
 
+.btn-acoes {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
 .icone-tabela {
 	color: #01021a;
 	font-size: 1.2rem;
 }
+
+
 /***** POPUP ******/
 
 

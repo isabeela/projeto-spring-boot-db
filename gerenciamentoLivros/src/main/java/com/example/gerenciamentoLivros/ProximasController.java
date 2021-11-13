@@ -50,7 +50,15 @@ public class ProximasController {
 		return  "proximas-leituras";
 	}
 	
-	
-	
+	@PostMapping("apagar/{id}")
+	 public String apagarProximas(@PathVariable("id") int id) {
+		ProximasService pdao = context.getBean(ProximasService.class);
+		pdao.deleteProximas(id);
+		return "redirect:/prox";
+	}
+		
 		
 }
+	
+	
+	

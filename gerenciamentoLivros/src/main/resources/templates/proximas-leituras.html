@@ -61,10 +61,25 @@
                     <td th:text="${prox.livro}"> </td>
                     <td th:text="${prox.autor}"></td>
                     <td> {{genero}} </td>
+                    
+                    <td> 
+                    
+                    	<button type="submit" value="" class="btn-acoes">
+                   		 	<i class="far fa-edit icone-tabela"></i> 
+                   		 </button>
+                    </td>
 
-                   <td> <i class="far fa-edit icone-tabela"></i> </td>
-                   <td> <i class="fas fa-trash icone-tabela"></i> </td>
-                   
+
+			<td>
+				<form th:action="@{'apagar/' + ${prox.id}}" method=post>
+       
+                  <button type="submit" value="" class="btn-acoes">
+                  	<i class="fas fa-trash icone-tabela">  </i>
+                  </button>
+           
+				</form>
+			</td>
+						                   
                 </tr>
             </table>
         </div>
