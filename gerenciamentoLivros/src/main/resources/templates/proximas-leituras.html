@@ -60,7 +60,8 @@
                 <tr th:each="prox : ${listar}">
                     <td th:text="${prox.livro}"> </td>
                     <td th:text="${prox.autor}"></td>
-                    <td> {{genero}} </td>
+                    <td th:text="${prox.genero}"> </td>
+                
                     
                     <td> 
                     
@@ -70,17 +71,17 @@
                     </td>
 
 
-			<td>
-				<form th:action="@{'apagar/' + ${prox.id}}" method=post>
-       
-                  <button type="submit" value="" class="btn-acoes">
-                  	<i class="fas fa-trash icone-tabela">  </i>
-                  </button>
-           
-				</form>
-			</td>
+					<td>
+						<form th:action="@{'apagar/' + ${prox.id}}" method=post>
+		       
+		                  <button type="submit" value="" class="btn-acoes">
+		                  	<i class="fas fa-trash icone-tabela">  </i>
+		                  </button>
+		           
+						</form>
+					</td>
 						                   
-                </tr>
+               </tr>
             </table>
         </div>
     </section>

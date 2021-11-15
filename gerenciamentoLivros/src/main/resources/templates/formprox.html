@@ -61,7 +61,7 @@
                     <tr th:each="prox : ${listar}">
                     <td th:text="${prox.livro}"> </td>
                     <td th:text="${prox.autor}"></td>
-                    <td> {{genero}} </td>
+                    <td th:text="${prox.genero}"></td>
 
                    <td> <i class="far fa-edit icone-tabela"></i> </td>
                    <td> <i class="fas fa-trash icone-tabela"></i> </td>
@@ -69,14 +69,13 @@
 
                 </tr>
 
-               
-
-               
-     
-     
             </table>
         </div>
     </section>
+    
+    
+    
+    
  <!-- Formulário -->
 
         <div id="modal" class="modal-container">
@@ -89,23 +88,7 @@
                     <form action="#" th:action="@{/proximas}" method=post th:object="${proximas}"  >
                         <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
                         <input type="text" th:field="*{autor}" placeholder=" Autor ">
-                        <select name="genero">
-                            <option value="genero"> Gênero </option>
-                            <option value="aventura"> Aventura </option>
-                            <option value="autoajuda"> Auto Ajuda </option>
-                            <option value="biografia"> Biografia </option>
-                            <option value="conto"> Conto </option>
-                            <option value="didatico"> Didático/Educacional </option>
-                            <option value="distopia"> Distopia </option>
-                            <option value="drama"> Drama </option>
-                            <option value="ficcao"> Ficção </option>
-                            <option value="fantasia"> Fantasia </option>
-                            <option value="poema"> Poema / Poesia </option>
-                            <option value="policial"> Policial </option>
-                            <option value="romance"> Romance </option>
-                            <option value="suspense"> Suspense </option>
-                            <option value="terror"> Terror </option>
-                        </select>
+                         <input type="text" th:field="*{genero}" placeholder="Genero">
                         
                            
                         <div class="btn">

@@ -26,12 +26,13 @@ public class ProximasDAO {
 	}
 	
 	public void inserirProximas (Proximas proximas) {
-		String sql = "INSERT INTO proximas(livro, autor)" + " VALUES (?,?)";
+		String sql = "INSERT INTO proximas(livro, autor, genero)" + " VALUES (?,?,?)";
 		
-		Object[] obj = new Object [2];
+		Object[] obj = new Object [3];
 		
 		obj[0] = proximas.getLivro();
 		obj[1] = proximas.getAutor();
+		obj[2] = proximas.getGenero();
 		
 		jdbc.update(sql, obj);
 	}
