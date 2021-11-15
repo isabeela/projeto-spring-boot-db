@@ -42,7 +42,7 @@ public class ProximasController {
 	  }
 	
 	
-	@GetMapping("/prox")
+	@GetMapping("/proximas-leituras")
 	public String listar (Model model) {
 		ProximasService pdao = context.getBean(ProximasService.class);
 		List<Map< String,Object>> prox = pdao.getProximas();
@@ -54,7 +54,7 @@ public class ProximasController {
 	 public String apagarProximas(@PathVariable("id") int id) {
 		ProximasService pdao = context.getBean(ProximasService.class);
 		pdao.deleteProximas(id);
-		return "redirect:/prox";
+		return "redirect:/proximas-leituras";
 	}
 		
 		
