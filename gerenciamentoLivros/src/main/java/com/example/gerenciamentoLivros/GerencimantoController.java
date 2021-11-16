@@ -18,10 +18,10 @@ public class GerencimantoController {
 		return "lidos";
 	}
 	
-	@GetMapping("/lista-desejos")
+	/*@GetMapping("/lista-desejos")
 	public String listadeDesejos () {
 		return "lista-desejos";
-	}
+	}*/
 		
 	@GetMapping("/emprestados")
 	public String emprestados () {

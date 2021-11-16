@@ -39,7 +39,7 @@
             <div class="texto">
                 <p> Cadastre os livros <br> que você deseja comprar </p>
                 <div class="botao">
-                   <a th:href="@{lista}" class="cadastro">  Cadastre aqui  </a> 
+                    <a href="#" class="cadastro">  Cadastre aqui  </a> 
                 </div>
             </div>
         </div>
@@ -59,42 +59,48 @@
                     <th> Editar </th>
                     <th> Excluir </th>
                 </tr>
-                
-                 <tr th:each="list : ${listar}">
-                    <td th:text="${list.livro}"> </td>
-                    <td th:text="${list.autor}"></td>
-                    <td th:text="${list.genero}"> </td>
-                    <td th:text="${list.site}"> </td>
-                    <td th:text="${list.preco}"> </td>
-                
-                    
-                    <td> 
-                    
-                    	<button type="submit" value="" class="btn-acoes">
-                   		 	<i class="far fa-edit icone-tabela"></i> 
-                   		 </button>
-                    </td>
 
-
-					<td>
-						<form th:action="@{'apagar-lista/' + ${list.id}}" method=post>
-		       
-		                  <button type="submit" value="" class="btn-acoes">
-		                  	<i class="fas fa-trash icone-tabela">  </i>
-		                  </button>
-		           
-						</form>
-					</td>
-						                   
-               </tr>
+               
+  
+     
             </table>
         </div>
     </section>
     
     
-
-
-
+    
+    
+    
+       <div id="modal" class="modal-container">
+        <div class="modalpopup">
+            <div class="topo-form">
+                <h1> Faça sua lista de desejos </h1>
+                 <a th:href="@{/lista-desejos}" class="fechar"> X </a>
+            </div>
+           <div class="formulario">
+                    <form action="#" th:action="@{/lista}" method=post th:object="${lista}"  >
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
+                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
+                        <input type="text" th:field="*{genero}" placeholder="Gênero">
+                        <input type="text" th:field="*{site}" placeholder="Link do site / Nome da livraria">
+                        <input type="number" th:field="*{preco}" placeholder="Preço">
+                        
+                           
+                        <div class="btn">
+                            <button type="submit" class="salvar">
+                              Salvar 
+                            </button>
+                            
+                            
+                           <a th:href="@{/lista-desejos}" class="cancelar"> Cancelar </a> 
+                        </div>
+                       
+                    </form>
+                </div>
+        </div>
+    </div>
+    
+  
 
     <footer>
         <img th:src=@{img/logo-livronauta.png} class="logo-rodape">
