@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS emprestimo (
      livro  varchar(70),
      autor  varchar(50),
      genero varchar (20),
-     emprestimo  varchar (300),
+     pessoa  varchar (300),
      data  varchar (40)
 );
+
+

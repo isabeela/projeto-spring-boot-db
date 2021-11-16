@@ -18,14 +18,4 @@ public class GerencimantoController {
 		return "lidos";
 	}
 	
-	/*@GetMapping("/lista-desejos")
-	public String listadeDesejos () {
-		return "lista-desejos";
-	}*/
-		
-	@GetMapping("/emprestados")
-	public String emprestados () {
-		return "emprestados";
-	}
-	
 }

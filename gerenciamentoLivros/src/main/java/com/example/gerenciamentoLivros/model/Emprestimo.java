@@ -3,7 +3,7 @@ package com.example.gerenciamentoLivros.model;
 public class Emprestimo {
 	
 	private int id;
-	private String livro, autor, genero, emprestimo, data;
+	private String livro, autor, genero, pessoa, data ;
 	
 	
 	public Emprestimo() {
@@ -11,12 +11,12 @@ public class Emprestimo {
 	}
 	
 	public Emprestimo(int id, String livro, String autor, String genero,
-			String emprestimo, String data) {
+			String pessoa, String data) {
 		this.id= id;
 		this.livro = livro;
 		this.autor = autor;
 		this.genero = genero;
-		this.emprestimo = emprestimo;
+		this.pessoa = pessoa;
 		this.data = data;
 	}
 
@@ -52,19 +52,19 @@ public class Emprestimo {
 		this.genero = genero;
 	}
 
-	public String getEmprestimo() {
-		return emprestimo;
+	public String getPessoa() {
+		return pessoa;
 	}
 
-	public void setEmprestimo (String emprestimo) {
-		this.emprestimo = emprestimo;
+	public void setPessoa (String pessoa) {
+		this.pessoa = pessoa;
 	}
 	
 	public String getData() {
 		return data;
 	}
 
-	public void setPreco (String data) {
+	public void setData (String data) {
 		this.data = data;
 	}
 

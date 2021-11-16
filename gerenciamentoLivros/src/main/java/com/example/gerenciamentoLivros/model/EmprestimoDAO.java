@@ -26,14 +26,14 @@ public class EmprestimoDAO {
 	}
 	
 	public void inserirEmprestimo (Emprestimo emprestimo) {
-		String sql = "INSERT INTO emprestimo(livro, autor, genero, emprestimo, data)" + " VALUES (?,?,?,?,?)";
+		String sql = "INSERT INTO emprestimo(livro, autor, genero, pessoa, data)" + " VALUES (?,?,?,?,?)";
 		
 		Object[] obj = new Object [5];
 		
 		obj[0] = emprestimo.getLivro();
 		obj[1] = emprestimo.getAutor();
 		obj[2] = emprestimo.getGenero();
-		obj[3] = emprestimo.getEmprestimo();
+		obj[3] = emprestimo.getPessoa();
 		obj[4] = emprestimo.getData();
 		
 		jdbc.update(sql, obj);
