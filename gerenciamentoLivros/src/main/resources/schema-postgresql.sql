@@ -1,5 +1,12 @@
 
-
+CREATE TABLE IF NOT EXISTS livros (
+	 id     serial PRIMARY KEY,
+     livro  varchar(70),
+     autor  varchar(50),
+     genero varchar (20),
+     ano   varchar (4),
+     avaliacao  varchar (40)
+);
 
 
 
