@@ -38,7 +38,7 @@
                 <img th:src=@{img/icone-cadastrar-lidos.png} class="imagem-astronauta">
             </div>
             <div class="texto">
-                <p> Cadastre seus livros lidos <br> e sua leitura atual </p>
+                <p> Cadastre seus livros lidos <br> durante o ano </p>
                 <div class="botao">
                     <a href="#" onclick="form()" class="cadastro">  Cadastre aqui  </a> 
                 </div>
@@ -132,53 +132,24 @@
                 <form>
                     <input type="text" placeholder="Nome do Livro">
                     <input type="text" placeholder=" Autor ">
+                    <input type="text" placeholder=" Gênero ">
+                    <input type="number" placeholder="Ano que foi lido">
+                    <input type="text" placeholder="Sua avaliação ">
 
-                    <div class="lado-a-lado">
-
-                        <select name="genero">
-                            <option value="genero"> Gênero </option>
-                            <option value="aventura"> Aventura </option>
-                            <option value="autoajuda"> Auto Ajuda </option>
-                            <option value="biografia"> Biografia </option>
-                            <option value="conto"> Conto </option>
-                            <option value="didatico"> Didático/Educacional </option>
-                            <option value="distopia"> Distopia </option>
-                            <option value="drama"> Drama </option>
-                            <option value="ficcao"> Ficção </option>
-                            <option value="fantasia"> Fantasia </option>
-                            <option value="poema"> Poema / Poesia </option>
-                            <option value="policial"> Policial </option>
-                            <option value="romance"> Romance </option>
-                            <option value="suspense"> Suspense </option>
-                            <option value="terror"> Terror </option>
-                        </select>
+                    
     
-    
-                        <input type="number" placeholder="Ano que foi lido" min='1' max="9999">
-
-                    </div>
+                     
+                 
                     
 
-                    <div class="leitura-atual">
-                        <input type="checkbox"> <span> Leitura Atual  </span> 
-                    </div>
-
-                    <div class="avaliacao">
-                        <p> Avaliação </p>
-                        <div class="rating rating2">
-                                <input type="radio" id="5" name="estrela" value="5"> <label for="5" title="Dê 5 estrelas"> ★ </label> 
-                                <input type="radio" id="4" name="estrela" value="4" > <label for="4" title="Dê 4 estrelas"> ★ </label> 
-                                <input type="radio" id="3" name="estrela" value="3"> <label for="3" title="Dê 3 estrelas"> ★ </label> 
-                                <input type="radio" id="2" name="estrela" value="2" > <label for="2" title="Dê 2 estrelas"> ★ </label> 
-                                <input type="radio" id="1" name="estrela" value="1"> <label for="1" title="Dê 1 estrela"> ★ </label> 
-                         </div>
-                    </div>
+              
+                  
 
                    
                     
                     <div class="btn">
-                        <a href="#" class="salvar" onclick="sucesso()"> Salvar </a>
-                        <a href="#" class="cancelar" onclick="cancelar()"> Cancelar </a>
+                        <a href="#" class="salvar" > Salvar </a>
+                        <a href="#" class="cancelar" > Cancelar </a>
                     </div>
 
                     
