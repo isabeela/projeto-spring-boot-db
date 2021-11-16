@@ -21,3 +21,11 @@ CREATE TABLE IF NOT EXISTS listas (
      preco  varchar (40)
 );
 
+CREATE TABLE IF NOT EXISTS emprestimo (
+	 id     serial PRIMARY KEY,
+     livro  varchar(70),
+     autor  varchar(50),
+     genero varchar (20),
+     emprestimo  varchar (300),
+     data  varchar (40)
+);
