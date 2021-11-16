@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class ProximasDAO {
+public class LidosDAO {
 	
 	@Autowired
 	DataSource dataSource;
@@ -25,30 +25,32 @@ public class ProximasDAO {
 		jdbc = new JdbcTemplate(dataSource);
 	}
 	
-	public void inserirProximas (Proximas proximas) {
-		String sql = "INSERT INTO proximas(livro, autor, genero)" + " VALUES (?,?,?)";
+	public void inserirLidos (Lidos lidos) {
+		String sql = "INSERT INTO lidos(livro, autor, genero, ano, avaliacao)" + " VALUES (?,?,?,?,?)";
 		
-		Object[] obj = new Object [3];
+		Object[] obj = new Object [5];
 		
-		obj[0] = proximas.getLivro();
-		obj[1] = proximas.getAutor();
-		obj[2] = proximas.getGenero();
+		obj[0] = lidos.getLivro();
+		obj[1] = lidos.getAutor();
+		obj[2] = lidos.getGenero();
+		obj[3] = lidos.getAno();
+		obj[4] = lidos.getAvaliacao();
 		
 		jdbc.update(sql, obj);
 	}
 	
 
 	
-	public List<Map< String,Object>> getProximas(){
-		String sql = "SELECT * FROM proximas";
-		List <Map< String,Object>> prox = (List <Map< String,Object>>)
+	public List<Map< String,Object>> getLidos (){
+		String sql = "SELECT * FROM lidos";
+		List <Map< String,Object>> lido = (List <Map< String,Object>>)
 		 jdbc.queryForList(sql);
-		return prox;
+		return lido;
 	}	
 	
 	
-	public void deleteProximas (int id) {
-		String sql = "DELETE FROM proximas WHERE id = ?";
+	public void deleteLidos (int id) {
+		String sql = "DELETE FROM lidos WHERE id = ?";
 		Object[] obj = new Object[1];
 		obj[0] = id;
 		jdbc.update(sql, obj);

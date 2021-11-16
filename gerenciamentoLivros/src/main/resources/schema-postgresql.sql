@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS livros (
+CREATE TABLE IF NOT EXISTS lidos(
 	 id     serial PRIMARY KEY,
      livro  varchar(70),
      autor  varchar(50),
