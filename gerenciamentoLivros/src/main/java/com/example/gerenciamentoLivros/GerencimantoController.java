@@ -13,9 +13,4 @@ public class GerencimantoController {
 		return "index";
 	}
 	
-	@GetMapping("/lidos")
-	public String lidos () {
-		return "lidos";
-	}
-	
 }

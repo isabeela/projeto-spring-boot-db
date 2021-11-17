@@ -2,7 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8">
-<title> Livros Lidos </title>
+<title> Livros Lidos / Leitura Atual </title>
 <link rel="stylesheet" th:href="@{css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
 <link rel="icon" th:href="@{img/icone-astronauta.png}">
@@ -40,7 +40,7 @@
             <div class="texto">
                 <p> Cadastre seus livros lidos <br> durante o ano </p>
                 <div class="botao">
-                    <a th:href="@{lidos}" class="cadastro">  Cadastre aqui  </a> 
+                    <a href="#" onclick="form()" class="cadastro">  Cadastre aqui  </a> 
                 </div>
             </div>
         </div>
@@ -61,40 +61,45 @@
                     <th> Excluir </th>
                 </tr>
 
-                <tr th:each="lidos : ${listar}">
-                    <td th:text="${lidos.livro}"> </td>
-                    <td th:text="${lidos.autor}"></td>
-                    <td th:text="${lidos.genero}"> </td>
-                    <td th:text="${lidos.ano}"> </td>
-                    <td th:text="${lidos.avaliacao}"> </td>
-                    
-                    
-                   <td> 
-                    
-                    	<button type="submit" value="" class="btn-acoes">
-                   		 	<i class="far fa-edit icone-tabela"></i> 
-                   		 </button>
-                    </td>
-
-
-					<td>
-						<form th:action="@{'apagar-lidos/' + ${lidos.id}}" method=post>
-		       
-		                  <button type="submit" value="" class="btn-acoes">
-		                  	<i class="fas fa-trash icone-tabela">  </i>
-		                  </button>
-		           
-						</form>
-					</td>
-
-                </tr>
-
-                
             </table>
         </div>
     </section>
     
-     
+      <!-- Formulário -->
+
+    <div id="modal" class="modal-container">
+		<div class="modalpopup">
+            <div class="topo-form">
+                <h1> Cadastre seus livros já lidos </h1>
+                <a th:href="@{/livros-lidos}" class="fechar"> X </a>
+            </div>
+            <div class="formulario">
+                <form action="#" th:action="@{/lidos}" method=post th:object="${lidos}"  >
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
+                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
+                        <input type="text" th:field="*{genero}" placeholder="Gênero">
+                         <input type="text" th:field="*{ano}" placeholder="Ano que foi lido">
+                        <input type="text" th:field="*{avaliacao}" placeholder="Sua Avaliação">
+                        
+
+                    <div class="btn">
+                            <button type="submit" class="salvar">
+                              Salvar 
+                            </button>
+                            
+                            
+                           <a th:href="@{/livros-lidos}" class="cancelar"> Cancelar </a> 
+                        </div>
+                       
+
+                    
+                   
+                </form>
+            </div>
+		</div>
+	</div>
+	
+
 
 
 
