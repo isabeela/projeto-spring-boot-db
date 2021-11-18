@@ -459,59 +459,48 @@ textarea {
     margin: 30px 0;
 }
 
-/**** ESTRELAS ****/
+/**** ERRO ****/
 
-.avaliacao, input[type=radio]{
-    display: block;
+#erro {
+    background-color: #0a0233;
 }
 
-.avaliacao > p {
-    margin: 0 10px;
+.erro {
+    text-align: center;
+    margin: 0 auto;
+    margin: 50px 0;
 }
 
-.rating {
+.erro > h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    padding: 30px;
     width: 80%;
-    font-size: 30px;
-    padding: 0;
+    margin: 0 auto;
 }
 
-.rating input {
-float: right;
-display: block;
-opacity: 0;
-left: 0;
-width: 10%;
-padding: 0;
+
+.imagem-erro {
+    width: 25%;
 }
 
-.rating input,
-.rating label {
-    padding: -30px;
-    color: #aaa;
-    text-decoration: none;
-    -webkit-transition: color .4s;
-    -moz-transition: color .4s;
-    -o-transition: color .4s;
-    transition: color .4s;
+.botao-erro{
+    margin: 10px 0;
 }
 
-.rating label:hover ~ label,
-.rating input:focus ~ label,
-.rating label:hover,
-.rating input[type=radio]:hover,
-.rating input[type=radio]:hover ~ a,
-.rating input[type=radio]:focus,
-.rating input[type=radio]:focus ~ a		{
-    color: orange;
-    cursor: pointer;
-}
-.rating2 {
-    direction:rtl;
-}
-.rating2 a {
-    padding: 0;
+.btn-erro {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
+.btn-erro:hover{
+    background-color: #fff;
+    color: #0a0233;
+}
 /*** RODAPÉ ****/
 
 footer {

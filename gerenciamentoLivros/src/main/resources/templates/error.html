@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+	<meta charset="UTF-8">
+	<title> Erro </title>
+	<link rel="stylesheet" th:href="@{css/style.css}">
+	<link rel="icon" th:href="@{img/icone-astronauta.png}">
+</head>
+<body id="erro">
+
+    <section class="erro">
+        <img th:src=@{img/icone-erro.png} class="imagem-erro" alt="erro">
+        <h1> Ooops! Parece que você está perdido no espaço!  </h1>
+
+        <div class="botao-erro">
+            <a th:href="@{/}" class="btn-erro"> Voltar </a>
+        </div>
+       
+       
+    </section>
+   
+</body>
+</html>

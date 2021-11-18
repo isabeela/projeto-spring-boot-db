@@ -13,4 +13,9 @@ public class GerencimantoController {
 		return "index";
 	}
 	
+	@GetMapping("/error")
+	public String error () {
+		return "error";
+	}
+	
 }
