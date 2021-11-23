@@ -37,6 +37,15 @@ public class ProximasDAO {
 		jdbc.update(sql, obj);
 	}
 	
+	
+	public Map<String, Object> getProximas(int id) {
+    	String sql = "SELECT * FROM proximas WHERE proximas.id = ?";
+    	Object[] obj = new Object[1];
+    	obj[0] = id;
+    	
+    	return jdbc.queryForMap(sql,obj);
+    }
+
 
 	
 	public List<Map< String,Object>> getProximas(){
@@ -53,6 +62,21 @@ public class ProximasDAO {
 		obj[0] = id;
 		jdbc.update(sql, obj);
 	}
+	
+
+    public void atualizarProximas(int id, Proximas proximas) {
+		String sql = "UPDATE proximas "
+				+    "SET livro = ?, autor = ?, genero = ? "
+				+    "WHERE id = ?" ;
+		Object[] obj = new Object[4];
+	
+		obj[0] = proximas.getLivro();
+		obj[1] = proximas.getAutor();
+		obj[2] = proximas.getGenero();
+		obj[3] = id;
+		jdbc.update(sql, obj);
+	}
+
 		
 }
 	

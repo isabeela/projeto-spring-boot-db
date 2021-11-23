@@ -39,14 +39,14 @@ public class ListaDAO {
 		jdbc.update(sql, obj);
 	}
 	
-	/*public Map<String, Object> getProximas(int id){
+	public Map<String, Object> getProximas(int id){
 		String sql = "SELECT * FROM proximas WHERE proximas.id = ?";
 		Object obj[] = new Object[1];
 		obj[0] = id;
 		
 		return jdbc.queryForMap(sql, obj);
 		
-	}*/
+	}
 	
 	public List<Map< String,Object>> getLista (){
 		String sql = "SELECT * FROM listas";

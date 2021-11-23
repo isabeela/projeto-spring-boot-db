@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -15,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
 
 import com.example.gerenciamentoLivros.model.Proximas;
 import com.example.gerenciamentoLivros.model.ProximasService;
@@ -56,6 +55,28 @@ public class ProximasController {
 		pdao.deleteProximas(id);
 		return "redirect:/proximas-leituras";
 	}
+	
+	@GetMapping("upd-prox/{id}")
+	public String formAtualizar(@PathVariable("id") int id, Model model) {
+		ProximasService pdao = context.getBean(ProximasService.class);
+		Map<String,Object> regs = pdao.getProximas(id);
+		Proximas prox = new Proximas(id,regs.get("livro").toString(),regs.get("autor").toString(),
+				regs.get("genero").toString()	);
+		model.addAttribute("proximas",prox);
+		model.addAttribute("id",id);
+		return "updproximas";
+	}
+	
+	@PostMapping("upd-prox/{id}")
+	public String atualizarProximas(@PathVariable("id") int id, 
+			                       Model model,
+			                       @ModelAttribute Proximas prox) {
+		ProximasService pdao = context.getBean(ProximasService.class);
+		pdao.atualizarProximas(id, prox);
+		return "proximas-leituras";
+	}
+	
+
 		
 		
 }

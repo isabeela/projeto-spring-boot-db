@@ -18,12 +18,20 @@ public class ProximasService {
 		pdao.inserirProximas(p);
 	}
 	
+	public Map<String,Object> getProximas(int id) {
+		return pdao.getProximas(id);
+	}
+	
 	public List<Map< String,Object>> getProximas(){
 		return pdao.getProximas();
 	}
 	
 	public void deleteProximas(int id) {
 		pdao.deleteProximas(id);
+	}
+	
+	public void atualizarProximas(int id, Proximas p){
+		pdao.atualizarProximas(id, p);
 	}
 	
 
