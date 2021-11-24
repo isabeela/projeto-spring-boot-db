@@ -20,6 +20,7 @@ import com.example.gerenciamentoLivros.model.Emprestimo;
 import com.example.gerenciamentoLivros.model.EmprestimoService;
 
 
+
 @Controller
 @ComponentScan("com.model")
 public class EmprestimoController {
@@ -58,6 +59,28 @@ public class EmprestimoController {
 		edao.deleteEmprestimo(id);
 		return "redirect:/emprestados";
 	}
+	
+	@GetMapping("/updemp/{id}")
+	public String formAtualizar(@PathVariable("id") int id, Model model) {
+		EmprestimoService ldao = context.getBean(EmprestimoService.class);
+		Map<String,Object> regs = ldao.getEmprestimo(id);
+		Emprestimo e = new Emprestimo(id,regs.get("livro").toString(),
+				regs.get("autor").toString(), regs.get("genero").toString(),
+				regs.get("pessoa").toString(), regs.get("data").toString());
+		model.addAttribute("emprestimo", e);
+		model.addAttribute("id",id);
+		return "updemprestimo";
+	}
+	
+	@PostMapping("/updemp/{id}")
+	public String atualizarEmprestimo(@PathVariable("id") int id, 
+			                       Model model,
+			                       @ModelAttribute Emprestimo e) {
+		EmprestimoService edao = context.getBean(EmprestimoService.class);
+		edao.atualizarEmprestimo(id, e);
+		return "redirect:/emprestados";
+	}
+	
 		
 		
 }

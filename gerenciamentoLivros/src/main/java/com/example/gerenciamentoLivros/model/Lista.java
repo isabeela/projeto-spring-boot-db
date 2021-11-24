@@ -2,9 +2,9 @@ package com.example.gerenciamentoLivros.model;
 
 public class Lista {
 	
-	private int id;
+	private int id, preco;
 	private String livro, autor, genero, site;
-	private int preco;
+	
 	
 	public Lista() {
 		
@@ -69,6 +69,5 @@ public class Lista {
 
 
 }
-
 
 

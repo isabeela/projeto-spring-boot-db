@@ -41,18 +41,6 @@ public class ProximasController {
 	  }
 	
 	
-	@GetMapping("/proximas/{id}")
-	public String getPerfil(@PathVariable("id") int id,
-			                Model model) {
-		ProximasService ps = context.getBean(ProximasService.class);
-		Map<String,Object> mapa = ps.getProximas(id);
-		model.addAttribute("livros",mapa.get("livros"));
-		model.addAttribute("autor",mapa.get("autor"));
-		model.addAttribute("genero",mapa.get("genero"));
-		model.addAttribute("id",id);
-		return "proximas";
-	}
-	
 	
 	@GetMapping("/proximas-leituras")
 	public String listar (Model model) {

@@ -56,6 +56,28 @@ public class ListaController {
 		ldao.deleteLista(id);
 		return "redirect:/lista-desejos";
 	}
+	
+	@GetMapping("/updlista/{id}")
+	public String formAtualizar(@PathVariable("id") int id, Model model) {
+		ListaService ldao = context.getBean(ListaService.class);
+		Map<String,Object> regs = ldao.getLista(id);
+		Lista l = new Lista(id,regs.get("livro").toString(),
+				regs.get("autor").toString(), regs.get("genero").toString(),
+				regs.get("site").toString(), regs.get("preco").hashCode());
+		model.addAttribute("listas", l);
+		model.addAttribute("id",id);
+		return "updtlista";
+	}
+	
+	@PostMapping("/updlista/{id}")
+	public String atualizarLista(@PathVariable("id") int id, 
+			                       Model model,
+			                       @ModelAttribute Lista l) {
+		ListaService ldao = context.getBean(ListaService.class);
+		ldao.atualizarLista(id, l);
+		return "redirect:/lista-desejos";
+	}
+	
 		
 		
 }

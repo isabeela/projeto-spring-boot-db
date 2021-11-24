@@ -19,12 +19,20 @@ public class ListaService {
 		ldao.inserirLista(l);
 	}
 	
+	public Map<String,Object> getLista(int id) {
+		return ldao.getLista(id);
+	}
+	
 	public List<Map< String,Object>> getLista(){
 		return ldao.getLista();
 	}
 	
 	public void deleteLista(int id) {
 		ldao.deleteLista(id);
+	}
+	
+	public void atualizarLista(int id, Lista l){
+		ldao.atualizarLista(id, l);
 	}
 	
 

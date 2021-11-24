@@ -19,6 +19,10 @@ public class EmprestimoService {
 		edao.inserirEmprestimo(e);
 	}
 	
+	public Map<String,Object> getEmprestimo(int id) {
+		return edao.getEmprestimo(id);
+	}
+	
 	public List<Map< String,Object>> getEmprestimo(){
 		return edao.getEmprestimo();
 	}
@@ -27,5 +31,8 @@ public class EmprestimoService {
 		edao.deleteEmprestimo(id);
 	}
 	
+	public void atualizarEmprestimo(int id, Emprestimo e){
+		edao.atualizarEmprestimo(id, e);
+	}
 
 }
