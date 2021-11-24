@@ -39,6 +39,15 @@ public class LidosDAO {
 		jdbc.update(sql, obj);
 	}
 	
+	
+	public Map<String, Object> getLidos(int id){
+		String sql = "SELECT * FROM lidos WHERE lidos.id = ?";
+		Object obj[] = new Object[1];
+		obj[0] = id;
+		
+		return jdbc.queryForMap(sql, obj);
+		
+	}
 
 	
 	public List<Map< String,Object>> getLidos (){
@@ -55,6 +64,23 @@ public class LidosDAO {
 		obj[0] = id;
 		jdbc.update(sql, obj);
 	}
+	
+	public void atualizarLidos(int id, Lidos lidos) {
+		String sql = "UPDATE lidos "
+				+    "SET livro = ?, autor = ?, genero = ?, ano = ?, avaliacao = ? "
+				+    "WHERE id = ?" ;
+		Object[] obj = new Object[6];
+	
+		obj[0] = lidos.getLivro();
+		obj[1] = lidos.getAutor();
+		obj[2] = lidos.getGenero();
+		obj[3] = lidos.getAno();
+		obj[4] = lidos.getAvaliacao();
+		
+		obj[5] = id;
+		jdbc.update(sql, obj);
+	}
+
 		
 }
 	

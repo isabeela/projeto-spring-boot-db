@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title> Editar Livros Lidos </title>
+<link rel="stylesheet" th:href="@{../css/style.css}">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
+<link rel="icon" th:href="@{../img/icone-astronauta.png}">
+<script th:src="@{../js/script.js}"></script>
+
+
+</head>
+<body>
+	
+	
+	<header>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars fa-2x menu"></i>
+    </label>
+      <nav>
+        <ul>
+            <li id="logo"> <a th:href="@{/}"> <img th:src=@{../img/logo-livronauta.png} class="logo"> </a>  </li>
+            
+             <li><i class="fas fa-home"></i><a th:href="@{/}"> Home </a> </li>
+            <li><i class="fas fa-book-reader"></i><a th:href="@{/lidos}"> Livros lidos  </a> </li>
+			<li> <i class="fas fa-book"></i> <a th:href="@{/proximas-leituras}"> Próximas leituras </a> </li>
+			<li><i class="far fa-bookmark"></i> <a th:href="@{/lista-desejos}"> Lista de desejos  </a> </li>
+			<li> <i class="fas fa-book-open"></i> <a th:href="@{/emprestados}"> Emprestados </a> </li>
+
+        </ul>
+        </nav>
+  </header>
+	
+	 <section id="banner">
+        <div class="banner">
+            <div class="imagem-banner">
+                <img th:src=@{../img/icone-cadastrar-lidos.png} class="imagem-astronauta">
+            </div>
+            <div class="texto">
+                <p> Cadastre seus livros lidos <br> durante o ano </p>
+                <div class="botao">
+                    <a href="#" onclick="form()" class="cadastro">  Cadastre aqui  </a> 
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+ <section id="tabela">
+        <h1> Lista de livros lidos </h1>
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th> Livro </th>
+                    <th> Autor </th>
+                    <th> Gênero </th>
+                    <th> Ano lido </th>
+                    <th> Sua Avaliação  </th>
+                    <th> Editar </th>
+                    <th> Excluir </th>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+    
+      <!-- Formulário -->
+
+    <div id="modal" class="modal-container">
+		<div class="modalpopup">
+            <div class="topo-form">
+                <h1>  Edite seus livros já lidos </h1>
+                <a th:href="@{/livros-lidos}" class="fechar"> X </a>
+            </div>
+            <div class="formulario">
+                <form action="#" th:action="@{'/updlidos/' + ${id}}" method=post th:object="${lidos}">
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
+                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
+                        <input type="text" th:field="*{genero}" placeholder="Gênero">
+                         <input type="text" th:field="*{ano}" placeholder="Ano que foi lido">
+                        <input type="text" th:field="*{avaliacao}" placeholder="Sua Avaliação">
+                        
+
+                    <div class="btn">
+                            <button type="submit" class="salvar">
+                              Salvar 
+                            </button>
+                            
+                            
+                           <a th:href="@{/livros-lidos}" class="cancelar"> Cancelar </a> 
+                        </div>
+                       
+
+                    
+                   
+                </form>
+            </div>
+		</div>
+	</div>
+	
+
+
+
+
+
+    <footer>
+        <img th:src=@{img/logo-livronauta.png} class="logo-rodape">
+    </footer>
+
+
+</body>
+</html>

@@ -19,12 +19,20 @@ public class LidosService {
 		ldao.inserirLidos(l);
 	}
 	
+	public Map<String,Object> getLidos(int id) {
+		return ldao.getLidos(id);
+	}
+	
 	public List<Map< String,Object>> getLidos(){
 		return ldao.getLidos();
 	}
 	
 	public void deleteLidos(int id) {
 		ldao.deleteLidos(id);
+	}
+	
+	public void atualizarLidos(int id, Lidos l){
+		ldao.atualizarLidos(id, l);
 	}
 	
 

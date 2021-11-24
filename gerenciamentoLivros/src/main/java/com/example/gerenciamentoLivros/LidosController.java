@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.gerenciamentoLivros.model.Lidos;
 import com.example.gerenciamentoLivros.model.LidosService;
 
+
 @Controller
 @ComponentScan("com.model")
 public class LidosController {
@@ -54,6 +55,27 @@ public class LidosController {
 	 public String apagarLista(@PathVariable("id") int id) {
 		LidosService ldao = context.getBean(LidosService.class);
 		ldao.deleteLidos(id);
+		return "redirect:/livros-lidos";
+	}
+	
+	@GetMapping("/updlidos/{id}")
+	public String formAtualizar(@PathVariable("id") int id, Model model) {
+		LidosService ldao = context.getBean(LidosService.class);
+		Map<String,Object> regs = ldao.getLidos(id);
+		Lidos l = new Lidos(id,regs.get("livro").toString(),
+				regs.get("autor").toString(), regs.get("genero").toString(),
+				regs.get("ano").hashCode(), regs.get("avaliacao").toString());
+		model.addAttribute("lidos", l);
+		model.addAttribute("id",id);
+		return "updtlidos";
+	}
+	
+	@PostMapping("/updlidos/{id}")
+	public String atualizarLidos(@PathVariable("id") int id, 
+			                       Model model,
+			                       @ModelAttribute Lidos l) {
+		LidosService ldao = context.getBean(LidosService.class);
+		ldao.atualizarLidos(id, l);
 		return "redirect:/livros-lidos";
 	}
 		
