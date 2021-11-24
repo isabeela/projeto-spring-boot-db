@@ -46,6 +46,7 @@ public class ProximasDAO {
     	return jdbc.queryForMap(sql,obj);
     }
 
+	
 
 	
 	public List<Map< String,Object>> getProximas(){
@@ -73,6 +74,7 @@ public class ProximasDAO {
 		obj[0] = proximas.getLivro();
 		obj[1] = proximas.getAutor();
 		obj[2] = proximas.getGenero();
+		
 		obj[3] = id;
 		jdbc.update(sql, obj);
 	}

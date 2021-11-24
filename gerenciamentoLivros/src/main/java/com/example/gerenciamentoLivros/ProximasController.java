@@ -41,6 +41,19 @@ public class ProximasController {
 	  }
 	
 	
+	@GetMapping("/proximas/{id}")
+	public String getPerfil(@PathVariable("id") int id,
+			                Model model) {
+		ProximasService ps = context.getBean(ProximasService.class);
+		Map<String,Object> mapa = ps.getProximas(id);
+		model.addAttribute("livros",mapa.get("livros"));
+		model.addAttribute("autor",mapa.get("autor"));
+		model.addAttribute("genero",mapa.get("genero"));
+		model.addAttribute("id",id);
+		return "proximas";
+	}
+	
+	
 	@GetMapping("/proximas-leituras")
 	public String listar (Model model) {
 		ProximasService pdao = context.getBean(ProximasService.class);
@@ -56,25 +69,28 @@ public class ProximasController {
 		return "redirect:/proximas-leituras";
 	}
 	
-	@GetMapping("upd-prox/{id}")
+	@GetMapping("/upd/{id}")
 	public String formAtualizar(@PathVariable("id") int id, Model model) {
 		ProximasService pdao = context.getBean(ProximasService.class);
 		Map<String,Object> regs = pdao.getProximas(id);
-		Proximas prox = new Proximas(id,regs.get("livro").toString(),regs.get("autor").toString(),
-				regs.get("genero").toString()	);
-		model.addAttribute("proximas",prox);
+		Proximas p = new Proximas(id,regs.get("livro").toString(),
+				regs.get("autor").toString(), regs.get("genero").toString() );
+		model.addAttribute("proximas", p);
 		model.addAttribute("id",id);
 		return "updproximas";
 	}
 	
-	@PostMapping("upd-prox/{id}")
+	@PostMapping("/upd/{id}")
 	public String atualizarProximas(@PathVariable("id") int id, 
 			                       Model model,
-			                       @ModelAttribute Proximas prox) {
+			                       @ModelAttribute Proximas p) {
 		ProximasService pdao = context.getBean(ProximasService.class);
-		pdao.atualizarProximas(id, prox);
-		return "proximas-leituras";
+		pdao.atualizarProximas(id, p);
+		return "redirect:/proximas-leituras";
 	}
+	
+
+	
 	
 
 		

@@ -2,11 +2,11 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8">
-<title> Livros emprestados </title>
-<link rel="stylesheet" th:href="@{css/style.css}">
+<title> Próximas Leituras </title>
+<link rel="stylesheet" th:href="@{../css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
-<link rel="icon" th:href="@{img/icone-astronauta.png}">
-<script th:src="@{js/script.js}"></script>
+<link rel="icon" th:href="@{../img/icone-astronauta.png}">
+<script th:src="@{../js/script.js}"></script>
 </head>
  
  
@@ -81,11 +81,11 @@
         <div id="modal" class="modal-container">
             <div class="modalpopup">
                 <div class="topo-form">
-                    <h1> Cadastre suas próximas leituras </h1>
+                    <h1> Edite suas próximas leituras </h1>
                     <a th:href="@{/proximas-leituras}" class="fechar"> X </a>
                 </div>
                 <div class="formulario">
-                    <form action="#" th:action="@{'upd-prox/' + ${id}}" method=post th:object="${proximas}">
+                   <form action="#" th:action="@{'/upd/' + ${id}}" method=post th:object="${proximas}">
                         <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
                         <input type="text" th:field="*{autor}" placeholder=" Autor ">
                          <input type="text" th:field="*{genero}" placeholder="Genero">
