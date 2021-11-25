@@ -2,8 +2,8 @@ package com.example.gerenciamentoLivros.model;
 
 public class Lidos {
 	
-	private int id, ano;
-	private String livro, autor, genero, avaliacao ;
+	private int id;
+	private String livro, autor, genero,ano, avaliacao ;
 	
 	
 	public Lidos() {
@@ -11,7 +11,7 @@ public class Lidos {
 	}
 	
 	public Lidos(int id, String livro, String autor, String genero,
-			int ano, String avaliacao) {
+			String ano, String avaliacao) {
 		this.id= id;
 		this.livro = livro;
 		this.autor = autor;
@@ -53,11 +53,11 @@ public class Lidos {
 	}
 
 
-	public int getAno() {
+	public String getAno() {
 		return ano;
 	}
 
-	public void setAno (int ano) {
+	public void setAno (String ano) {
 		this.ano = ano;
 	}
 	

@@ -2,15 +2,15 @@ package com.example.gerenciamentoLivros.model;
 
 public class Lista {
 	
-	private int id, preco;
-	private String livro, autor, genero, site;
+	private int id;
+	private String livro, autor, genero, site, preco;
 	
 	
 	public Lista() {
 		
 	}
 	
-	public Lista(int id, String livro, String autor, String genero, String site, int preco) {
+	public Lista(int id, String livro, String autor, String genero, String site, String preco) {
 		this.id= id;
 		this.livro = livro;
 		this.autor = autor;
@@ -59,11 +59,11 @@ public class Lista {
 		this.site = site;
 	}
 	
-	public int getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 
-	public void setPreco (int preco) {
+	public void setPreco (String preco) {
 		this.preco = preco;
 	}
 

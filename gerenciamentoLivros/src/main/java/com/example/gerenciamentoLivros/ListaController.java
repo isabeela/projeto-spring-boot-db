@@ -63,7 +63,7 @@ public class ListaController {
 		Map<String,Object> regs = ldao.getLista(id);
 		Lista l = new Lista(id,regs.get("livro").toString(),
 				regs.get("autor").toString(), regs.get("genero").toString(),
-				regs.get("site").toString(), regs.get("preco").hashCode());
+				regs.get("site").toString(), regs.get("preco").toString());
 		model.addAttribute("listas", l);
 		model.addAttribute("id",id);
 		return "updtlista";

@@ -64,10 +64,11 @@ public class LidosController {
 		Map<String,Object> regs = ldao.getLidos(id);
 		Lidos l = new Lidos(id,regs.get("livro").toString(),
 				regs.get("autor").toString(), regs.get("genero").toString(),
-				regs.get("ano").hashCode(), regs.get("avaliacao").toString());
+				regs.get("ano").toString(),regs.get("avaliacao").toString());
 		model.addAttribute("lidos", l);
 		model.addAttribute("id",id);
 		return "updtlidos";
+		
 	}
 	
 	@PostMapping("/updlidos/{id}")
