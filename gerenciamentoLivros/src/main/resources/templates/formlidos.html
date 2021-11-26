@@ -2,11 +2,10 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8">
-<title> Livros Lidos / Leitura Atual </title>
+<title> Livros Lidos  </title>
 <link rel="stylesheet" th:href="@{css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
 <link rel="icon" th:href="@{img/icone-astronauta.png}">
-<script th:src="@{js/script.js}"></script>
 
 
 </head>
@@ -78,7 +77,7 @@
                         <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
                         <input type="text" th:field="*{autor}" placeholder=" Autor ">
                         <input type="text" th:field="*{genero}" placeholder="Gênero">
-                         <input type="number" th:field="*{ano}" placeholder="Ano que foi lido">
+                         <input type="number" th:field="*{ano}" value="" placeholder="Ano que foi lido">
                         <input type="text" th:field="*{avaliacao}" placeholder="Sua Avaliação">
                         
 

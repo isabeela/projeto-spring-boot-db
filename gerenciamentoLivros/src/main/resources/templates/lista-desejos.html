@@ -34,7 +34,7 @@
 	<section id="banner">
         <div class="banner">
             <div class="imagem-banner">
-                <img th:src=@{img/icone-listar.png} class="imagem-astronauta-estrela">
+                <img th:src=@{img/icone-listar.png} class="imagem-astronauta">
             </div>
             <div class="texto">
                 <p> Cadastre os livros <br> que você deseja comprar </p>
@@ -70,7 +70,7 @@
                     
                     <td> 
                     
-                    	<a th:href="@{'updlista/' + ${list.id}}">
+                    	<a th:href="@{'updlista/' + ${list.id}}" title="Editar">
                    		 	<i class="far fa-edit icone-tabela"></i> 
                    		</a>
                     </td>
@@ -79,7 +79,7 @@
 					<td>
 						<form th:action="@{'apagar-lista/' + ${list.id}}" method=post>
 		       
-		                  <button type="submit" value="" class="btn-acoes">
+		                  <button type="submit" value="" class="btn-acoes" title="Excluir">
 		                  	<i class="fas fa-trash icone-tabela">  </i>
 		                  </button>
 		           

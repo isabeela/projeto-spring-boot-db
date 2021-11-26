@@ -6,7 +6,6 @@
 <link rel="stylesheet" th:href="@{css/style.css}">
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css}">
 <link rel="icon" th:href="@{img/icone-astronauta.png}">
-<script th:src="@{js/script.js}"></script>
 
 </head>
 <body>
@@ -64,7 +63,7 @@
                 
                     
                 <td>
-						<a th:href="@{'upd/' + ${prox.id}}">
+						<a th:href="@{'upd/' + ${prox.id}}" title="Editar">
 	
 		                  	<i class="fas fa-edit icone-tabela">  </i>
 		                 </a>
@@ -76,7 +75,7 @@
 					<td>
 						<form th:action="@{'apagar/' + ${prox.id}}" method=post>
 		       
-		                  <button type="submit" value="" class="btn-acoes">
+		                  <button type="submit" value="" class="btn-acoes" title="Excluir">
 		                  	<i class="fas fa-trash icone-tabela">  </i>
 		                  </button>
 		           
