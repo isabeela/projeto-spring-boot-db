@@ -31,7 +31,7 @@
 	<section id="banner">
         <div class="banner">
             <div class="imagem-banner">
-                <img th:src=@{img/icone-cadastrar-emprestimo.png} class="imagem-astronauta-estrela">
+                <img th:src=@{img/icone-cadastrar-emprestimo.png} class="imagem-astronauta">
             </div>
             <div class="texto">
                 <p> Cadastre os livros <br> que você deseja comprar </p>
@@ -74,11 +74,11 @@
             </div>
            <div class="formulario">
                     <form action="#" th:action="@{/emprestimo}" method=post th:object="${emprestimo}"  >
-                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
-                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
-                        <input type="text" th:field="*{genero}" placeholder="Gênero">
-                         <input type="text" th:field="*{pessoa}" placeholder="Para quem foi emprestado">
-                        <input type="text" th:field="*{data}" placeholder="Data do Empréstimo">
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro" required>
+                        <input type="text" th:field="*{autor}" placeholder=" Autor" required>
+                        <input type="text" th:field="*{genero}" placeholder="Gênero" required>
+                         <input type="text" th:field="*{pessoa}" placeholder="Para quem foi emprestado" required>
+                        <input type="text" th:field="*{data}" placeholder="Data do Empréstimo" required>
                         
                            
                         <div class="btn">

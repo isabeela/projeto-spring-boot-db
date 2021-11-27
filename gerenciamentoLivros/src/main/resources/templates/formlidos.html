@@ -74,11 +74,11 @@
             </div>
             <div class="formulario">
                 <form action="#" th:action="@{/lidos}" method=post th:object="${lidos}"  >
-                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro">
-                        <input type="text" th:field="*{autor}" placeholder=" Autor ">
-                        <input type="text" th:field="*{genero}" placeholder="Gênero">
-                         <input type="number" th:field="*{ano}" value="" placeholder="Ano que foi lido">
-                        <input type="text" th:field="*{avaliacao}" placeholder="Sua Avaliação">
+                        <input type="text" th:field="*{livro}" placeholder="Nome do Livro" required>
+                        <input type="text" th:field="*{autor}" placeholder=" Autor" required>
+                        <input type="text" th:field="*{genero}" placeholder="Gênero" required>
+                         <input type="number" th:field="*{ano}" value="" placeholder="Ano que foi lido" required>
+                        <input type="text" th:field="*{avaliacao}" placeholder="Sua Avaliação" required>
                         
 
                     <div class="btn">
