@@ -229,6 +229,14 @@ a {
 #tabela {
     text-align: center;
     padding: 50px;
+    width: 60%;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+
+#tabela > h1 {
+	font-size: 1.7rem;
 }
 
 table {
@@ -240,7 +248,7 @@ table {
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px;
     width: 20%;
 }
 
