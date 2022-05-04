@@ -522,3 +522,47 @@ footer {
     width: 12%;
     padding: 15px 0;
 }
+
+
+
+
+
+/*** ROBÔ ***/
+
+#robo {
+    right: 0;
+}
+
+.robo {
+    right: 0;
+    bottom: 5px;
+    display: flex;
+    position: fixed;
+    width: 45%;
+}
+
+.balao {
+    width: 50%;
+    height: 10%;
+    background-color: #fff;
+    padding: 20px 40px;
+    border: 2px solid #000;
+    border-radius: 60px 60px 0px 60px;
+    margin: 0 -20px;
+    
+}
+
+#frases {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.3rem;
+}
+
+#fechar {
+    font-family: 'Logo';
+    color: #000;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    
+}
