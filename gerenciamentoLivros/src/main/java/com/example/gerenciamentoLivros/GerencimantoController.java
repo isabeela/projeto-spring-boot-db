@@ -28,6 +28,16 @@ public class GerencimantoController {
 		return "cadastrar";
 	}
 	
+	@GetMapping("/guia")
+	public String guia () {
+		return "guia";
+	}
+	
+	@GetMapping("/anuncios")
+	public String anuncios () {
+		return "anuncios";
+	}
+	
 	@GetMapping("/error")
 	public String error () {
 		return "error";

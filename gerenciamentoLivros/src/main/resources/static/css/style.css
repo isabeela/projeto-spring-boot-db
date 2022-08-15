@@ -284,7 +284,7 @@ td {
 /***** POPUP ******/
 
 
-.modal-container{
+.modal-container, .modal-container-guia{
     width: 100vw;
     height: 80vw;
     position: fixed;
@@ -344,7 +344,6 @@ input[type=checkbox] {
     background-color: #e3e3e3;
     background-size: 100%;
     width: 650px;
-    height: 420px;
     min-width: 100px;
     padding: 80px 80px 0 80px;
     position: relative;
@@ -796,3 +795,192 @@ td {
     font-size: 1.2rem;
     
 }
+
+
+
+/***** GUIA DAS GALÁXIAS *****/
+
+
+  .guia {
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .guia > h1 {
+    font-size: 1.6rem;
+  }
+
+  .pular-intro {
+    margin: 25px auto;
+  }
+
+  .btn-guia {
+    margin: 70px auto;
+    background-color: #0a0233;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+/*** PAGINA INTRO GUIA ****/
+
+#intro-guia {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#intro-guia > h1 {
+    font-size: 1.8rem;
+}
+
+.escolha-guia {
+    display: flex;
+    text-align: center;
+    margin: auto;
+	top:50%;
+	padding-bottom: 50px
+}
+
+.anuncio, .forum {
+    background-color: #0a0233;
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: 7px 7px 7px #333333;
+}
+
+.anuncio > a {
+    color: #fff;
+}
+
+
+
+/***** ANÚNCIO ******/
+
+.banner-anuncio {
+    padding: 40px;
+}
+
+
+.titulo-anuncio > h1 {
+   border-bottom: 3px solid #0a0233;
+   margin: 30px;
+   padding: 0;
+   width: 12%;
+   font-size: 1.6rem;
+}
+
+
+.titulo-meus-anuncios > h1 {
+    border-bottom: 3px solid #0a0233;
+    margin: 30px;
+    padding: 0;
+    width: 15%;
+    font-size: 1.6rem;
+ }
+ 
+
+.ver-anuncios {
+    margin: auto 10px;
+}
+
+
+
+#anuncios {
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    text-align: center;
+}
+
+.anuncio-usuario {
+    border: 1px solid #0a0233;
+    color: #fff;
+    margin: 0 auto;
+    width: 60%;
+    padding: 5px 10px;
+    border-radius: 5px ;
+}
+
+.capa-livro, .img-livro {
+    width: 100%;
+}
+
+.nome-livro {
+    font-size: 1.3rem;
+    color: #0a0233;
+    font-weight: bold;
+}
+
+.usuario {
+    margin: 0 auto;
+}
+
+.avatar-user {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.avatar-guia {
+    margin: 5px 0;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.nome-usuario {
+    font-size: 1rem;
+    color: #0a0233;
+    margin: auto 5px;
+    font-weight: bold;
+}
+
+
+
+/********** MEUS ANUNCIOS ********/
+
+.editar-anuncio {
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.excluir-anuncio {
+    text-align: right;
+    margin: 0 50px 0 0;
+    color: #c54545;
+    font-weight: bold;
+}
+
+
+/******** RECOMENDAÇÕES **********/
+
+.astro-recomenda {
+    text-align: center;
+    margin: -8px 0 0 0;
+}
+
+.container-rec {
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 50px auto;
+    text-align: center;
+    width: 100%;
+    margin: -5px 0 0 0;
+}
+
+.img-rec {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.img-rec > img {
+    width: 18%;
+    margin: 7px;
+}
+
