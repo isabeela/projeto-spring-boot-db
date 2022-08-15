@@ -13,6 +13,21 @@ public class GerencimantoController {
 		return "index";
 	}
 	
+	@GetMapping("/inicio")
+	public String inicial () {
+		return "inicio";
+	}
+	
+	@GetMapping("/login")
+	public String login () {
+		return "login";
+	}
+	
+	@GetMapping("/cadastrar")
+	public String cadastrar () {
+		return "cadastrar";
+	}
+	
 	@GetMapping("/error")
 	public String error () {
 		return "error";
