@@ -340,7 +340,7 @@ input[type=checkbox] {
     }
 }
 
-.modalpopup {
+  .modalpopup, .modalperfil{
     background-color: #e3e3e3;
     background-size: 100%;
     width: 650px;
@@ -348,6 +348,10 @@ input[type=checkbox] {
     padding: 80px 80px 0 80px;
     position: relative;
     margin: 0 auto;
+}
+
+.modalpopuperfil {
+    padding: 50px;
 }
 
 .fechar {

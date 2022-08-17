@@ -38,6 +38,33 @@ public class GerencimantoController {
 		return "anuncios";
 	}
 	
+	@GetMapping("/meus-anuncios")
+	public String meusanuncios () {
+		return "meus-anuncios";
+	}
+	
+	
+	@GetMapping("/conquistas")
+	public String conquistas () {
+		return "conquistas";
+	}
+	
+	@GetMapping("/recomendacoes")
+	public String recomendacoes () {
+		return "recomendacoes";
+	}
+	
+	
+	@GetMapping("/configurar")
+	public String configurar () {
+		return "configurar-perfil";
+	}
+	
+	@GetMapping("/quiz")
+	public String quiz () {
+		return "quiz";
+	}
+	
 	@GetMapping("/error")
 	public String error () {
 		return "error";
