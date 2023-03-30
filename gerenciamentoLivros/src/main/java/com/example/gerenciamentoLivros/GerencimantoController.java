@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class GerencimantoController {
 	
-	@GetMapping("/teste")
+	@GetMapping("/")
 	public String inicio () {
 		return "index";
 	}
