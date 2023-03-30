@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages ="com.example.gerenciamentoLivros" + "com.example.gerenciamentoLivros.model")
+@ComponentScan(basePackages ="com.example.gerenciamentoLivros.model")
 
 public class GerenciamentoLivrosApplication {
 
