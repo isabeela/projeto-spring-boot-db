@@ -1,15 +1,14 @@
 spring:
     datasource:
         platform: postgres
-        url: jdbc:postgresql://ec2-35-171-90-188.compute-1.amazonaws.com:5432/detjbeq23rmvuc
+        url: jdbc:postgresql://containers-us-west-202.railway.app:8014/railway
         username: omotknfghxwjrk
-        password: 0fb5017b2a1841ef2ff9b6e8d1d909cbb5caa16231df2cca370399453dedac35
+        password: bb7brlkpVzrGlpFCbQfH
         driverClassName: org.postgresql.Driver
         initialization-mode: always
         initialize: true
         schema: classpath:/schema-postgresql.sql
 
- 
 
     jpa: 
         hibernate:
