@@ -2,7 +2,8 @@ spring:
     datasource:
         platform: postgres
         url: jdbc:postgresql://containers-us-west-202.railway.app:8014/railway
-        username: omotknfghxwjrk
+        #username: omotknfghxwjrk
+        username: postgres
         password: bb7brlkpVzrGlpFCbQfH
         driverClassName: org.postgresql.Driver
         initialization-mode: always
