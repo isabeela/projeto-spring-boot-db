@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 //@Controller
 
-@RequestMapping("/api/")
+@RequestMapping("/api")
 public class GerencimantoController {
 	
 	/*@GetMapping("/inicio")
